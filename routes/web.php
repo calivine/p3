@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'OrderController@index');
+
+Route::post('/', 'OrderController@submit');
+
+Route::get('/confirm', 'OrderController@confirmation');

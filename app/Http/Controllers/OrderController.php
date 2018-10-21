@@ -8,12 +8,12 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        return view('orders.welcome');
     }
 
-    public function submit()
+    public function order()
     {
-        return 'submit page';
+        return 'Process order page';
     }
 
     public function confirmation()

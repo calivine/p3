@@ -18,6 +18,6 @@ class OrderController extends Controller
 
     public function confirmation()
     {
-        return 'confirmation page';
+        return view('orders.confirm');
     }
 }

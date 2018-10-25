@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
 
     {{-- CSS global to every page can be loaded here --}}
-    <!--<link href='/css/foobooks.css' rel='stylesheet'>-->
+    <link href='/css/p3.css' rel='stylesheet'>
 
     {{-- CSS specific to a given page/child view can be included via a stack --}}
     @stack('head')

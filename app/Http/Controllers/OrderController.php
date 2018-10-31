@@ -32,7 +32,7 @@ class OrderController extends Controller
         $toppings = $request->input('topping');
         $dipping_flavor = $request->input('flavor');
         $quantity = $request->input('quantity');
-        $customer_name = $request->input('customer');
+        $customer = $request->input('customer');
         $topping_price = 0;
         if ($request->has('topping'))
         {
@@ -55,7 +55,7 @@ class OrderController extends Controller
         $subtotal = $unit_price + $topping_price;
         # Redirect to /confirm page
         return redirect('/confirm')->with([
-            'customer' => $customer_name,
+            'customer' => $customer,
             'dipping_flavor' => $dipping_flavor,
             'toppings' => $toppings,
             'subtotal' => $subtotal,

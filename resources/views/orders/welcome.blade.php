@@ -36,34 +36,27 @@
                 Toppings: (+$3 per topping)
             </legend>
             <ul class='checkboxes'>
-                <li>
-                    <label for='rainbow'>Rainbow sprinkles</label>
-                    <input type='checkbox' name='topping[]' value='rainbow' id='rainbow'>
-                </li>
-                <li>
-                    <label for='chocolate'>Chocolate sprinkles</label>
-                    <input type='checkbox' name='topping[]' value='chocolate' id='chocolate'>
-                </li>
-                <li>
-                    <label for='walnuts'>Chopped walnuts</label>
-                    <input type='checkbox' name='topping[]' value='walnuts' id='walnuts'>
-                </li>
+                @include('modules.checkbox-item', ['input' => 'rainbow', 'text' => 'Rainbow Sprinkles'])
+                @include('modules.checkbox-item', ['input' => 'chocolate', 'text' => 'Chocolate Sprinkles'])
+                @include('modules.checkbox-item', ['input' => 'walnuts', 'text' => 'Chopped Walnuts'])
+                @include('modules.checkbox-item', ['input' => 'pecans', 'text' => 'Chopped Pecans'])
+                @include('modules.checkbox-item', ['input' => 'pearls', 'text' => 'Candy Pearls'])
             </ul>
             <label for='quantity'>
                 Amount:
             </label>
             <select name='quantity' id='quantity'>
                 <option value='2'>
-                    2
+                    2 for $14.99
                 </option>
                 <option value='4'>
-                    4
+                    4 for $19.99
                 </option>
                 <option value='6'>
-                    6
+                    6 for $29.99
                 </option>
                 <option value='12'>
-                    12
+                    12 for $49.99
                 </option>
             </select>
         </fieldset>

@@ -25,7 +25,7 @@ class OrderController extends Controller
     {
         # Validate request data
         $request->validate([
-            'flavor' => 'required',
+            'flavor' => 'required|alpha',
             'quantity' => 'required',
             'customer' => 'required',
         ]);
@@ -53,16 +53,6 @@ class OrderController extends Controller
             }
         }
         $subtotal = $unit_price + $topping_price;
-        # dump($subtotal);
-        # dump($customer_name);
-        # dump($dipping_flavor);
-        # dump($toppings);
-        # For each topping added to order
-        # add (+) $3 to order total
-        # add sales tax
-        # Optional, collect zip codes/state to apply state's
-        # sales tax and shipping cost.
-        #
         # Redirect to /confirm page
         return redirect('/confirm')->with([
             'customer' => $customer_name,

@@ -18,7 +18,7 @@
                 Select flavor of dipping chocolate
             </label>
             <select name='flavor' id='flavor' autofocus>
-                <option value='select'>
+                <option value=''>
                     Flavor
                 </option>
                 <option value='milk'>

@@ -12,8 +12,26 @@
 @section('content')
 
     <h1>
-        Order Confirmation
+        Confirmation
     </h1>
-
+    <p>
+        Name: {{ $customer }}
+    </p>
+    <p>
+        Flavor: {{ $dipping_flavor }}
+    </p>
+    <p>
+        Toppings:
+    </p>
+        @if($toppings)
+            @foreach($toppings as $index => $topping)
+                <p>
+                    {{ $topping }}
+                </p>
+            @endforeach
+        @endif
+    <p>
+        Subtotal: ${{ $subtotal }}
+    </p>
 
 @endsection

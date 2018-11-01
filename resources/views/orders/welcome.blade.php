@@ -18,18 +18,10 @@
                 Select flavor of dipping chocolate
             </label>
             <select name='flavor' id='flavor' autofocus>
-                <option value=''>
-                    Flavor
-                </option>
-                <option value='milk'>
-                    Milk Chocolate
-                </option>
-                <option value='dark'>
-                    Dark Chocolate
-                </option>
-                <option value='white'>
-                    White Chocolate
-                </option>
+                @include('modules.select', ['field' => '', 'text' => 'Flavor'])
+                @include('modules.select', ['field' => 'milk', 'text' => 'Milk Chocolate'])
+                @include('modules.select', ['field' => 'dark', 'text' => 'Dark Chocolate'])
+                @include('modules.select', ['field' => 'white', 'text' => 'White Chocolate'])
             </select>
             @include('modules.input-errors', ['field' => 'flavor'])
             <legend>
@@ -46,18 +38,10 @@
                 Amount:
             </label>
             <select name='quantity' id='quantity'>
-                <option value='2'>
-                    2 for $14.99
-                </option>
-                <option value='4'>
-                    4 for $19.99
-                </option>
-                <option value='6'>
-                    6 for $29.99
-                </option>
-                <option value='12'>
-                    12 for $49.99
-                </option>
+                @include('modules.select', ['field' => '2', 'text' => '2 for $14.99'])
+                @include('modules.select', ['field' => '4', 'text' => '4 for $19.99'])
+                @include('modules.select', ['field' => '6', 'text' => '6 for $29.99'])
+                @include('modules.select', ['field' => '12', 'text' => '12 for $49.99'])
             </select>
         </fieldset>
         <fieldset>

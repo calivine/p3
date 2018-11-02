@@ -25,10 +25,10 @@
                 @include('modules.flavor-select', ['field' => 'yogurt', 'text' => 'Yogurt'])
             </select>
             @include('modules.input-errors', ['field' => 'flavor'])
-            <label for='toppings'>
+            <h2>
                 Toppings: (+$3 per topping)
-            </label>
-            <ul class='checkboxes' id='toppings'>
+            </h2>
+            <ul class='checkboxes'>
                 <li>
                     <label for='rainbow'>Rainbow Sprinkles</label>
                     <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('rainbow', old('topping'))) ? ' checked' : '' }} id='rainbow' value='rainbow' >

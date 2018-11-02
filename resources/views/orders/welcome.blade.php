@@ -15,20 +15,20 @@
         <fieldset>
             <legend>Place order for chocolate covered strawberries below:</legend>
             <label for='flavor'>
-                Select flavor of dipping chocolate
+                Select flavor of dipping sauce
             </label>
             <select name='flavor' id='flavor' autofocus>
                 @include('modules.flavor-select', ['field' => '', 'text' => 'Select Flavor'])
                 @include('modules.flavor-select', ['field' => 'milk', 'text' => 'Milk Chocolate'])
                 @include('modules.flavor-select', ['field' => 'dark', 'text' => 'Dark Chocolate'])
                 @include('modules.flavor-select', ['field' => 'white', 'text' => 'White Chocolate'])
-                @include('modules.flavor-select', ['field' => 'yogurt', 'text' => 'Yogurt Topping'])
+                @include('modules.flavor-select', ['field' => 'yogurt', 'text' => 'Yogurt'])
             </select>
             @include('modules.input-errors', ['field' => 'flavor'])
-            <h2>
+            <label for='toppings'>
                 Toppings: (+$3 per topping)
-            </h2>
-            <ul class='checkboxes'>
+            </label>
+            <ul class='checkboxes' id='toppings'>
                 <li>
                     <label for='rainbow'>Rainbow Sprinkles</label>
                     <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('rainbow', old('topping'))) ? ' checked' : '' }} id='rainbow' value='rainbow' >

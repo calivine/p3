@@ -16,6 +16,8 @@
     <a href='/'><img src='/images/p3-logo.png' id='logo' alt='P3 Commerce Logo'></a>
 </header>
 
+@include('modules.title')
+
 <section>
     @yield('content')
 </section>

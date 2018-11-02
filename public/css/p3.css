@@ -1,3 +1,33 @@
+/* box sizing: http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    /* https://fonts.google.com/ */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* sticky footer */
+    position: relative;
+    min-height: 100%;
+}
+
+footer {
+    text-align: center;
+    background-color: #28EAEA;
+
+    /* sticky footer */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/* Format checkboxes and radio buttons:
+   remove bullet points from lists of checkbox or radio buttons */
 ul.checkboxes, ul.radios {
     list-style-type: none;
     padding: 0;

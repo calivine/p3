@@ -28,6 +28,7 @@ class OrderController extends Controller
             'flavor' => 'required|alpha',
             'quantity' => 'required',
             'customer' => 'required',
+            'topping'
         ]);
         $toppings = $request->input('topping');
         $dipping_flavor = $request->input('flavor');

@@ -40,12 +40,11 @@ class OrderController extends Controller
                 $topping_price += 3;
             }
         }
-        $prices = [
-            '2' => 14.99,
-            '4' => 19.99,
-            '6' => 29.99,
-            '12' => 49.99
-        ];
+
+        $prices_raw = file_get_contents(database_path('prices.json'));
+
+        $prices = json_decode($prices_raw, true);
+
         foreach ($prices as $amount => $price) {
             if ($quantity == $amount)
             {

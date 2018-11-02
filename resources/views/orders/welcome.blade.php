@@ -31,23 +31,23 @@
             <ul class='checkboxes'>
                 <li>
                     <label for='rainbow'>Rainbow Sprinkles</label>
-                    <input type='checkbox' name='topping[]' {{ (old('topping')) ? 'checked' : '' }} id='rainbow' value='rainbow' >
+                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('rainbow', old('topping'))) ? ' checked' : '' }} id='rainbow' value='rainbow' >
                 </li>
                 <li>
                     <label for='chocolate'>Chocolate Sprinkles</label>
-                    <input type='checkbox' name='topping[]' {{ (old('topping')) ? 'checked' : '' }} id='chocolate' value='chocolate'>
+                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('chocolate', old('topping'))) ? ' checked' : '' }} id='chocolate' value='chocolate'>
                 </li>
                 <li>
                     <label for='walnuts'>Chopped Walnuts</label>
-                    <input type='checkbox' name='topping[]' {{ (old('topping')) ? 'checked' : '' }} id='walnuts' value='walnuts'>
+                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('walnuts', old('topping'))) ? ' checked' : '' }} id='walnuts' value='walnuts'>
                 </li>
                 <li>
                     <label for='pecans'>Chopped Pecans</label>
-                    <input type='checkbox' name='topping[]' {{ (old('topping')) ? 'checked' : '' }} id='pecans' value='pecans'>
+                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('pecans', old('topping'))) ? ' checked' : '' }} id='pecans' value='pecans'>
                 </li>
                 <li>
                     <label for='pearls'>Candy Pearls</label>
-                    <input type='checkbox' name='topping[]' {{ (old('topping')) ? 'checked' : '' }} id='pearls' value='pearls'>
+                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('pearls', old('topping'))) ? ' checked' : '' }} id='pearls' value='pearls'>
                 </li>
             </ul>
             <label for='quantity'>

@@ -31,6 +31,7 @@ class OrderController extends Controller
             'customer' => 'required',
             'topping'
         ]);
+
         $toppings = $request->input('topping');
         $dipping_flavor = $request->input('flavor');
         $quantity = $request->input('quantity');
@@ -38,7 +39,8 @@ class OrderController extends Controller
         $topping_price = 0;
         if ($request->has('topping'))
         {
-            foreach ($toppings as $index => $topping) {
+            foreach ($toppings as $index => $topping)
+            {
                 $topping_price += 3;
             }
         }
@@ -49,7 +51,8 @@ class OrderController extends Controller
 
         $unit_price = 0;
 
-        foreach ($prices as $amount => $price) {
+        foreach ($prices as $amount => $price)
+        {
             if ($quantity == $amount)
             {
                 $unit_price += $price;

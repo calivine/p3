@@ -15,55 +15,43 @@
         <fieldset>
             <legend>Place order for chocolate covered strawberries below:</legend>
             <label for='flavor'>
-                Select flavor of dipping sauce
+                Select flavor of dipping sauce:
+                <select name='flavor' id='flavor' autofocus>
+                    @include('modules.flavor-select', ['field' => '', 'text' => 'Select Flavor'])
+                    @include('modules.flavor-select', ['field' => 'milk', 'text' => 'Milk Chocolate'])
+                    @include('modules.flavor-select', ['field' => 'dark', 'text' => 'Dark Chocolate'])
+                    @include('modules.flavor-select', ['field' => 'white', 'text' => 'White Chocolate'])
+                    @include('modules.flavor-select', ['field' => 'yogurt', 'text' => 'Yogurt'])
+                </select>
             </label>
-            <select name='flavor' id='flavor' autofocus>
-                @include('modules.flavor-select', ['field' => '', 'text' => 'Select Flavor'])
-                @include('modules.flavor-select', ['field' => 'milk', 'text' => 'Milk Chocolate'])
-                @include('modules.flavor-select', ['field' => 'dark', 'text' => 'Dark Chocolate'])
-                @include('modules.flavor-select', ['field' => 'white', 'text' => 'White Chocolate'])
-                @include('modules.flavor-select', ['field' => 'yogurt', 'text' => 'Yogurt'])
-            </select>
             @include('modules.input-errors', ['field' => 'flavor'])
             <h2>
                 Toppings: (+$3 per topping)
             </h2>
             <ul class='checkboxes'>
-                <li>
-                    <label for='rainbow'>Rainbow Sprinkles</label>
-                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('rainbow', old('topping'))) ? ' checked' : '' }} id='rainbow' value='rainbow' >
-                </li>
-                <li>
-                    <label for='chocolate'>Chocolate Sprinkles</label>
-                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('chocolate', old('topping'))) ? ' checked' : '' }} id='chocolate' value='chocolate'>
-                </li>
-                <li>
-                    <label for='walnuts'>Chopped Walnuts</label>
-                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('walnuts', old('topping'))) ? ' checked' : '' }} id='walnuts' value='walnuts'>
-                </li>
-                <li>
-                    <label for='pecans'>Chopped Pecans</label>
-                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('pecans', old('topping'))) ? ' checked' : '' }} id='pecans' value='pecans'>
-                </li>
-                <li>
-                    <label for='pearls'>Candy Pearls</label>
-                    <input type='checkbox' name='topping[]' {{ (is_array(old('topping')) and in_array('pearls', old('topping'))) ? ' checked' : '' }} id='pearls' value='pearls'>
-                </li>
+                @include('modules.toppings-checkbox', ['field' => 'rainbow', 'text' => 'Rainbow Sprinkles'])
+                @include('modules.toppings-checkbox', ['field' => 'chocolate', 'text' => 'Chocolate Sprinkles'])
+                @include('modules.toppings-checkbox', ['field' => 'walnuts', 'text' => 'Chopped Walnuts'])
+                @include('modules.toppings-checkbox', ['field' => 'pecans', 'text' => 'Chopped Pecans'])
+                @include('modules.toppings-checkbox', ['field' => 'pearls', 'text' => 'Candy Pearls'])
+                @include('modules.toppings-checkbox', ['field' => 'hearts', 'text' => 'Candy Hearts'])
             </ul>
             <label for='quantity'>
-                Amount:
+                Quantity:
+                <select name='quantity' id='quantity'>
+                    @include('modules.quantity-select', ['field' => '2', 'text' => '2 for $14.99'])
+                    @include('modules.quantity-select', ['field' => '4', 'text' => '4 for $19.99'])
+                    @include('modules.quantity-select', ['field' => '6', 'text' => '6 for $29.99'])
+                    @include('modules.quantity-select', ['field' => '12', 'text' => '12 for $49.99'])
+                </select>
             </label>
-            <select name='quantity' id='quantity'>
-                @include('modules.quantity-select', ['field' => '2', 'text' => '2 for $14.99'])
-                @include('modules.quantity-select', ['field' => '4', 'text' => '4 for $19.99'])
-                @include('modules.quantity-select', ['field' => '6', 'text' => '6 for $29.99'])
-                @include('modules.quantity-select', ['field' => '12', 'text' => '12 for $49.99'])
-            </select>
         </fieldset>
         <fieldset>
             <h2>Customer Details:</h2>
-            <label for='customer'>Name:</label>
-            <input type='text' autocomplete='off' name='customer' id='customer' value='{{ old('customer') }}'>
+            <label for='customer'>
+                Name:
+                <input type='text' autocomplete='off' name='customer' id='customer' value='{{ old('customer') }}'>
+            </label>
             @include('modules.input-errors', ['field' => 'customer'])
         </fieldset>
         <input type='submit' value='Place Order'>

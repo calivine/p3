@@ -16,6 +16,7 @@ class OrderController extends Controller
         return view('orders.confirm')->with([
             'customer' => $request->session()->get('customer'),
             'dipping_flavor' => $request->session()->get('dipping_flavor'),
+            'quantity' => $request->session()->get('quantity'),
             'toppings' => $request->session()->get('toppings'),
             'subtotal' => $request->session()->get('subtotal'),
         ]);
@@ -46,17 +47,22 @@ class OrderController extends Controller
 
         $prices = json_decode($prices_raw, true);
 
+        $unit_price = 0;
+
         foreach ($prices as $amount => $price) {
             if ($quantity == $amount)
             {
-                $unit_price = $price;
+                $unit_price += $price;
             }
         }
+
         $subtotal = $unit_price + $topping_price;
+
         # Redirect to /confirm page
         return redirect('/confirm')->with([
             'customer' => $customer,
             'dipping_flavor' => $dipping_flavor,
+            'quantity' => $quantity,
             'toppings' => $toppings,
             'subtotal' => $subtotal,
         ]);

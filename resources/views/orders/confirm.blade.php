@@ -21,17 +21,17 @@
         Flavor: {{ $dipping_flavor }}
     </p>
     <p>
-        Toppings:
+        Quantity: {{ $quantity }}
     </p>
+    <p>
+        Toppings:
         @if($toppings)
             @foreach($toppings as $index => $topping)
-                <p>
-                    {{ $topping }}
-                </p>
+                {{ $topping }}
             @endforeach
         @endif
+    </p>
     <p>
         Subtotal: ${{ $subtotal }}
     </p>
-
 @endsection

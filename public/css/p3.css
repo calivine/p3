@@ -9,13 +9,6 @@ html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-form {
-    margin: inherit;
-    padding: 5px;
-    /* Width of form */
-    width: 500px;
-}
-
 footer {
     text-align: center;
 }
@@ -29,10 +22,30 @@ h1 {
     text-align: center;
 }
 
+/* Form Stylings */
+form {
+    margin: inherit;
+    padding: 5px;
+    /* Width of form */
+    width: 500px;
+}
+
+fieldset {
+    border-style: hidden;
+}
+
 /* Format checkboxes and radio buttons:
    remove bullet points from lists of checkbox or radio buttons */
 ul.checkboxes, ul.radios {
     list-style-type: none;
     padding: 0;
     text-align: left;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
 }

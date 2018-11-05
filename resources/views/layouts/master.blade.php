@@ -17,7 +17,9 @@
 <body>
 
 <header>
-    <a href='/'><img src='/images/p3-logo.png' id='logo' alt='P3 Commerce Logo'></a>
+    <div class='container'>
+        <a href='/'><img src='/images/p3-logo.png' id='logo' alt='P3 Commerce Logo'></a>
+    </div>
 </header>
 
 @include('modules.title')

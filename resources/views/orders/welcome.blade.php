@@ -17,7 +17,9 @@
             <label for='flavor'>
                 Select flavor of dipping sauce:*
                 <select name='flavor' id='flavor' autofocus>
-                    @include('modules.select', ['field' => '', 'text' => 'Select Flavor'])
+                    <option value=''>
+                        Select Flavor
+                    </option>
                     @include('modules.flavor-select', ['field' => 'Milk Chocolate'])
                     @include('modules.flavor-select', ['field' => 'Dark Chocolate'])
                     @include('modules.flavor-select', ['field' => 'White Chocolate'])

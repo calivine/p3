@@ -8,7 +8,13 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return view('orders.welcome');
+        Log::info('Testing 123...');
+        return view('orders.home');
+    }
+
+    public function display()
+    {
+        return view('orders.product');
     }
 
     public function confirmation(Request $request)
@@ -60,6 +66,9 @@ class OrderController extends Controller
         }
 
         $subtotal = $unit_price + $topping_price;
+
+        # Sort array of toppings:
+        $toppings = array_sort($toppings);
 
         # Redirect to /confirm page
         return redirect('/confirm')->with([

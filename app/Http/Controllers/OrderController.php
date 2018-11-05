@@ -26,7 +26,7 @@ class OrderController extends Controller
     {
         # Validate request data
         $request->validate([
-            'flavor' => 'required|alpha',
+            'flavor' => 'required',
             'quantity' => 'required',
             'customer' => 'required',
             'topping'

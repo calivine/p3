@@ -27,7 +27,7 @@
         Toppings:
         @if($toppings)
             @foreach($toppings as $index => $topping)
-                {{ $topping }}
+                {{ $topping }},
             @endforeach
         @endif
     </p>

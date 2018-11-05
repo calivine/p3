@@ -1,3 +1,3 @@
 <option value='{{ $field }}' {{ (old('flavor') == $field) ? 'selected' : '' }}>
-    {{ $field }}
+    {{ $text }}
 </option>

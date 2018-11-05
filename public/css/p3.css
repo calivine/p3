@@ -12,6 +12,7 @@ html {
 form {
     margin: inherit;
     padding: 5px;
+    /* Width of form */
     width: 500px;
 }
 
@@ -33,4 +34,5 @@ h1 {
 ul.checkboxes, ul.radios {
     list-style-type: none;
     padding: 0;
+    text-align: left;
 }

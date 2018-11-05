@@ -4,13 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\Log;
 
 class OrderController extends Controller
 {
     public function index()
     {
-        Log::info('Testing 123...');
         return view('orders.home');
     }
 

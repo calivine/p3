@@ -1,12 +1,24 @@
+/* Global rules */
+:root {
+    --button-back-color: #F60C0C;
+    --button-fore-color: #FFFFFF;
+}
+
+
+/* Display body */
+html {
+    /* https://fonts.google.com/ */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 body {
     display: block;
     height: 100%;
     margin: 20px 0 0 0;
 }
 
-html {
-    /* https://fonts.google.com/ */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+header {
+    margin: 0 15px;
 }
 
 footer {
@@ -19,10 +31,26 @@ section {
 }
 
 h1 {
+    align-items: center;
+    font-weight: bold;
+    height: 100px;
     text-align: center;
 }
 
-/* Form Stylings */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+
+
+/* Form Stylings
+input[type=checkbox] {
+
+} */
+
 form {
     margin: inherit;
     padding: 5px;
@@ -32,6 +60,13 @@ form {
 
 fieldset {
     border-style: hidden;
+    text-align: left;
+}
+
+select {
+    margin: 0 0 8px;
+    padding: 0 8px;
+    width: 200px;
 }
 
 /* Format checkboxes and radio buttons:
@@ -42,10 +77,13 @@ ul.checkboxes, ul.radios {
     text-align: left;
 }
 
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1170px;
+#label-select {
+    display: block;
+    width: 225px;
+}
+
+
+/* Button styles */
+.btn {
+    border: 1px solid #FFFFFF;
 }

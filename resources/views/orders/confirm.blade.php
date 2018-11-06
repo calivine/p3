@@ -23,14 +23,14 @@
     <p>
         Quantity: {{ $quantity }}
     </p>
-    <p>
-        Toppings:
-        @if($toppings)
+    @if($toppings)
+        <p>
+            Toppings:
             @foreach($toppings as $index => $topping)
                 {{ $topping }},
             @endforeach
-        @endif
-    </p>
+        </p>
+    @endif
     <p>
         Subtotal: ${{ $subtotal }}
     </p>

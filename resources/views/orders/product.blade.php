@@ -14,9 +14,9 @@
         {{ csrf_field() }}
         <fieldset>
             <legend>Place order for chocolate covered strawberries below</legend>
-            <label for='flavor'>
-                Select flavor of dipping sauce:*
-                <select name='flavor' id='flavor' autofocus>
+            <label id='label-select'>
+                Dipping sauce:*
+                <select name='flavor' autofocus>
                     <option value=''>
                         Select Flavor
                     </option>
@@ -27,9 +27,9 @@
                 </select>
             </label>
             @include('modules.input-errors', ['field' => 'flavor'])
-            <h2>
+            <label>
                 Toppings: (+$3 per topping)
-            </h2>
+            </label>
             <ul class='checkboxes'>
                 @include('modules.toppings-checkbox', ['field' => 'Rainbow Sprinkles'])
                 @include('modules.toppings-checkbox', ['field' => 'Chocolate Sprinkles'])
@@ -38,9 +38,9 @@
                 @include('modules.toppings-checkbox', ['field' => 'Candy Pearls'])
                 @include('modules.toppings-checkbox', ['field' => 'Candy Hearts'])
             </ul>
-            <label for='quantity'>
+            <label id='label-select'>
                 Quantity:
-                <select name='quantity' id='quantity'>
+                <select name='quantity'>
                     @include('modules.quantity-select', ['field' => '2', 'text' => '2 for $14.99'])
                     @include('modules.quantity-select', ['field' => '4', 'text' => '4 for $19.99'])
                     @include('modules.quantity-select', ['field' => '6', 'text' => '6 for $29.99'])
@@ -56,6 +56,6 @@
             </label>
             @include('modules.input-errors', ['field' => 'customer'])
         </fieldset>
-        <input type='submit' value='Place Order'>
+        <button class='btn' type='submit'>Place Order</button>
     </form>
 @endsection

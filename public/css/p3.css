@@ -1,7 +1,9 @@
 /* Global rules */
 :root {
     --button-back-color: #F60C0C;
+    --card-back-color: #F60C0C;
     --button-fore-color: #FFFFFF;
+    --card-fore-color: #FFFFFF;
 }
 
 
@@ -32,6 +34,8 @@ section {
 
 h1 {
     align-items: center;
+    color: #F60C0C;
+    font-family: "Harlow Solid Italic";
     font-weight: bold;
     height: 100px;
     text-align: center;
@@ -50,7 +54,6 @@ h1 {
 input[type=checkbox] {
 
 } */
-
 form {
     margin: inherit;
     padding: 5px;
@@ -77,9 +80,23 @@ ul.checkboxes, ul.radios {
     text-align: left;
 }
 
-#label-select {
+#label-flavor {
     display: block;
     width: 225px;
+}
+
+#label-quantity {
+    display: block;
+    width: 225px;
+}
+
+#label-name {
+    display: block;
+    width: 225px;
+}
+
+#label-checkbox {
+    vertical-align: middle;
 }
 
 
@@ -87,3 +104,5 @@ ul.checkboxes, ul.radios {
 .btn {
     border: 1px solid #FFFFFF;
 }
+
+

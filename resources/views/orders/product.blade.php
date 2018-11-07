@@ -14,7 +14,7 @@
         {{ csrf_field() }}
         <fieldset>
             <legend>Place order for chocolate covered strawberries below</legend>
-            <label id='label-select'>
+            <label id='label-flavor'>
                 Dipping sauce:*
                 <select name='flavor' autofocus>
                     <option value=''>
@@ -38,7 +38,7 @@
                 @include('modules.toppings-checkbox', ['field' => 'Candy Pearls'])
                 @include('modules.toppings-checkbox', ['field' => 'Candy Hearts'])
             </ul>
-            <label id='label-select'>
+            <label id='label-quantity'>
                 Quantity:
                 <select name='quantity'>
                     @include('modules.quantity-select', ['field' => '2', 'text' => '2 for $14.99'])
@@ -50,12 +50,17 @@
         </fieldset>
         <fieldset>
             <h2>Customer Details:</h2>
-            <label for='customer'>
+            <label for='customer' id='label-name'>
                 Name:*
                 <input type='text' autocomplete='off' name='customer' id='customer' value='{{ old('customer') }}'>
             </label>
             @include('modules.input-errors', ['field' => 'customer'])
         </fieldset>
         <button class='btn' type='submit'>Place Order</button>
+        @if(count($errors) > 0)
+            <div class='card'>
+                Please correct the errors above.
+            </div>
+        @endif
     </form>
 @endsection

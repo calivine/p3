@@ -9,11 +9,6 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return view('orders.home');
-    }
-
-    public function display()
-    {
         return view('orders.product');
     }
 
@@ -35,7 +30,7 @@ class OrderController extends Controller
             'flavor' => 'required',
             'quantity' => 'required',
             'customer' => 'required',
-            'topping'
+            'topping' => 'nullable'
         ]);
 
         $toppings = $request->input('topping');

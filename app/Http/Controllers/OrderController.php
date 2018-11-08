@@ -61,10 +61,7 @@ class OrderController extends Controller
         }
 
         $subtotal = $unit_price + $topping_price;
-
-        # Sort array of toppings:
-        $toppings = array_sort($toppings);
-
+        
         # Redirect to /confirm page
         return redirect('/confirm')->with([
             'customer' => $customer,

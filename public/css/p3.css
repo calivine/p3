@@ -4,6 +4,7 @@
     --card-back-color: #F60C0C;
     --button-fore-color: #FFFFFF;
     --card-fore-color: #FFFFFF;
+    --button-hover-back-color: /*#D60909*/#D10909;
 }
 
 
@@ -36,9 +37,13 @@ h1 {
     align-items: center;
     color: #F60C0C;
     font-family: "Harlow Solid Italic";
-    font-weight: bold;
-    height: 100px;
+    font-weight: 700;
+    height: 65px;
     text-align: center;
+}
+
+h3 {
+    font-size: 1.1em;
 }
 
 .container {
@@ -55,6 +60,7 @@ input[type=checkbox] {
 
 } */
 form {
+    align-items: start;
     margin: inherit;
     padding: 5px;
     /* Width of form */
@@ -64,6 +70,10 @@ form {
 fieldset {
     border-style: hidden;
     text-align: left;
+}
+
+legend {
+    font-size: 1.1em;
 }
 
 select {
@@ -80,23 +90,32 @@ ul.checkboxes, ul.radios {
     text-align: left;
 }
 
+input[type='text'] {
+    margin: 0 0 8px;
+    padding: 0 8px;
+    width: 200px;
+}
+
+#label-toppings {
+    font-weight: 700;
+}
+
 #label-flavor {
     display: block;
+    font-weight: 700;
     width: 225px;
 }
 
 #label-quantity {
     display: block;
+    font-weight: 700;
     width: 225px;
 }
 
 #label-name {
     display: block;
+    font-weight: 700;
     width: 225px;
-}
-
-#label-checkbox {
-    vertical-align: middle;
 }
 
 

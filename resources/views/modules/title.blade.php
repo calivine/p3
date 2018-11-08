@@ -1,3 +1,3 @@
 <h1>
-    Candy Covered Strawberries
+    Candy Dipped Fruit
 </h1>

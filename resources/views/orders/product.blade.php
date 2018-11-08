@@ -27,7 +27,7 @@
                 </select>
             </label>
             @include('modules.input-errors', ['field' => 'flavor'])
-            <label>
+            <label id='label-toppings'>
                 Toppings: (+$3 per topping)
             </label>
             <ul class='checkboxes'>
@@ -49,7 +49,7 @@
             </label>
         </fieldset>
         <fieldset>
-            <h2>Customer Details:</h2>
+            <h3>Customer Details:</h3>
             <label for='customer' id='label-name'>
                 Name:*
                 <input type='text' autocomplete='off' name='customer' id='customer' value='{{ old('customer') }}'>

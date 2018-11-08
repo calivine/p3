@@ -1,3 +1,3 @@
 <h1>
-    Candy Dipped Fruit
+    Gourmet Dipped Fruit
 </h1>

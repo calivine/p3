@@ -34,4 +34,4 @@
 
 
 ## 6. Misc
-Nice use of the custom validation using regex to get alpha characters and spaces only!
++ Nice use of the custom validation using regex to get alpha characters and spaces only!
